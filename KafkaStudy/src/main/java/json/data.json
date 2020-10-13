@@ -1,0 +1,118 @@
+[
+  {
+    "cata_id": "CC20200325104919.00",
+    "o_time": "2020-03-25 10:49:19",
+    "m": 7.5,
+    "epi_lat": 48.93,
+    "epi_lon": 157.74,
+    "epi_depth": 30,
+    "auto_flag": "M",
+    "location_c": "千岛群岛",
+    "grade_level": "1",
+    "load_time": "2020-03-30 14:01:04"
+  },
+  {
+    "dataId": "43f6c73298a24c21cddc1db3eff7",
+    "sendTime": "20200106140908",
+    "departmentId": "91420500673656549K",
+    "provinceId": "42",
+    "type": "04",
+    "datas": {
+      "id": "1",
+      "sensorno": "420106NBWY0412",
+      "collectdate": "2020/01/06 14:08:00",
+      "xvalue": "0.0527435594662907",
+      "yvalue": "-0.837524458416799"
+    }
+  },
+  [{
+    "cata_id":"CC20200325104919.00",
+    "o_time":"2020-03-25 10:49:19",
+    "m":7.5,
+    "epi_lat":48.93,
+    "epi_lon":157.74,
+    "epi_depth":30,
+    "auto_flag":"M",
+    "location_c":"千岛群岛",
+    "grade_level":"1",
+    "load_time":"2020-03-30 14:01:04"
+  },
+    {
+      "cata_id":"CC20200325104919.00",
+      "o_time":"2020-03-25 10:49:19",
+      "m":7.5,
+      "epi_lat":48.93,
+      "epi_lon":157.74,
+      "epi_depth":30,
+      "auto_flag":"M",
+      "location_c":"千岛群岛",
+      "grade_level":"1",
+      "load_time":"2020-03-30 14:01:04"
+    }],
+  {
+    "dataId":"43f6c732a24c2182cddc1db3eff7",
+    "sendTime":"20200106140908",
+    "departmentId":"91420500673656549K",
+    "provinceId":"42",
+    "type":"04",
+    "datas":[
+      {
+        "id":"1",
+        "sensorno":"420106NBWY0412",
+        "collectdate":"2020/01/06 14:08:00",
+        "xvalue":"0.0527435594662907",
+        "yvalue":"-0.837524458416799"
+      },
+      {
+        "id":"1",
+        "sensorno":"420106NBWY0412",
+        "collectdate":"2020/01/06 14:08:30",
+        "xvalue":"0.0524235109610677",
+        "yvalue":"-0.837342156395159"
+      }
+    ]
+  },
+  {
+    "dataId":"43f6c732a24c2182cddc1db3eff7",
+    "sendTime":"20200106140908",
+    "departmentId":"91420500673656549K",
+    "provinceId":"42",
+    "type":"01",
+    "datas":
+    {
+      "id":"1",
+      "sensorno":"420106NBWY0412",
+      "collectdate":"2020/01/06 14:08:00",
+      "xvalue":"0.0527435594662907"
+    }
+
+  },
+  {
+    "dataId":"43f6c732a24c2182cddc1db3eff7",
+    "sendTime":"20200106140908",
+    "departmentId":"91420500673656549K",
+    "provinceId":"42",
+    "type":"02",
+    "datas":[
+      {
+        "id":"1",
+        "sensorno":"420106NBWY0412",
+        "collectdate":"2020/01/06 14:08:00",
+        "xvalue":"0.0527435594662907",
+        "yvalue":"-0.837524458416799",
+        "zvalue":"-0.837524458416799"
+      },
+      {
+        "id":"1",
+        "sensorno":"420106NBWY0412",
+        "collectdate":"2020/01/06 14:08:30",
+        "xvalue":"0.0524235109610677",
+        "yvalue":"-0.837342156395159",
+        "zvalue":"-0.837524458416799"
+      }
+    ]
+  }
+]
+
+
+
