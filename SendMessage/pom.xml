@@ -4,10 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.oneseek</groupId>
-    <artifactId>FlinkStudy</artifactId>
-    <packaging>pom</packaging>
+    <groupId>cn.oneseek.kafka</groupId>
+    <artifactId>SendMessage</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <scale.version>2.11</scale.version>
+        <kafka.version>0.11.0.1</kafka.version>
+        <flink.version>1.4.0</flink.version>
+        <logback.version>1.1.7</logback.version>
+        <slf4j.version>1.7.21</slf4j.version>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -20,25 +26,26 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>KafkaToFlinkToKafka</module>
-        <module>KafkaFlinkMySQLDemo</module>
-        <module>HttpClientStudy</module>
-        <module>DemoWindowWordCount</module>
-        <module>DemoWikiEdits</module>
-        <module>WriteToGaussDB</module>
-        <module>FlinkDemo</module>
-    </modules>
-    <properties>
-        <scala.version>2.11</scala.version>
-        <flink.version>1.9.1</flink.version>
-        <logback.version>1.1.7</logback.version>
-        <slf4j.version>1.7.21</slf4j.version>
-    </properties>
-
-
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_${scale.version}</artifactId>
+            <version>${kafka.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--Flink-->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-java</artifactId>
@@ -54,10 +61,9 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-streaming-java_${scala.version}</artifactId>
+            <artifactId>flink-streaming-java_${scale.version}</artifactId>
             <version>${flink.version}</version>
             <exclusions>
                 <exclusion>
@@ -72,7 +78,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-clients_${scala.version}</artifactId>
+            <artifactId>flink-clients_${scale.version}</artifactId>
             <version>${flink.version}</version>
             <exclusions>
                 <exclusion>
@@ -87,14 +93,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-statebackend-rocksdb_${scala.version}</artifactId>
-            <version>${flink.version}</version>
-        </dependency>
-
-        <!--Flink-Kafka -->
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-kafka-0.11_${scala.version}</artifactId>
+            <artifactId>flink-connector-kafka-0.10_${scale.version}</artifactId>
             <version>${flink.version}</version>
             <exclusions>
                 <exclusion>
@@ -107,9 +106,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-
-
 
         <!--日志依赖-->
         <dependency>
@@ -128,36 +124,17 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
+
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.69</version>
         </dependency>
         <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-gson</artifactId>
-            <version>10.0.0</version>
-        </dependency>
-        <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.6.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-jdbc</artifactId>
-            <version>1.6.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>5.2.8.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>1.14</version>
+            <version>3.11.4</version>
         </dependency>
     </dependencies>
 

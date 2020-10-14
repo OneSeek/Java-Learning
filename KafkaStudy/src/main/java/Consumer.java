@@ -9,17 +9,6 @@ import java.util.Properties;
 
 public class Consumer {
     public static void main(String[] args) {
-        /*模拟参数*/
-        args = new String[]{"--configPath",
-                "C:\\MyProgram\\Project\\KafkaStudy\\src\\main\\java\\config",
-                "--parallelism", "3",
-                "--enableCheckpoint", "false"
-        };
-//        //加载kafka生产者配置、消费者配置
-//        if (!utils.KafkaUtils.loadDataCleanConfig(args[1])) {
-//            return;
-//        }
-
 
         run("test");
 //        run("topic-std");

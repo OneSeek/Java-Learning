@@ -1,0 +1,16 @@
+{
+  "dataid":"43f6c732a24c2182cddc1db3eff7",
+  "sendTime":"20200106140908",
+  "departmentId":"91420500673656549K",
+  "provinceId":"42",
+  "type":"02",
+  "datas": {
+      "id":"1",
+      "sensorno":"420106NBWY0412",
+      "collectdate":"2020/01/06 14:08:00",
+      "xvalue":"0.0527435594662907",
+      "yvalue":"-0.837524458416799",
+      "zvalue":"-0.837524458416799"
+    }
+
+}

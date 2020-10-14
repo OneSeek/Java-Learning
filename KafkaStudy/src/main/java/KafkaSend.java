@@ -12,9 +12,8 @@ import java.util.Random;
 
 public class KafkaSend {
     public static void main(String[] args) throws InterruptedException {
-        String ip = "192.168.144.95:9092";
         //配置信息
-//        String ip = "localhost:9092";
+        String ip = "localhost:9092";
         Properties props = new Properties();
         //kafka服务器地址
         props.put("bootstrap.servers", ip);
@@ -23,7 +22,7 @@ public class KafkaSend {
         props.put("key.serializer", StringSerializer.class);
         props.put("value.serializer", StringSerializer.class);
 
-        String jsonData = KafkaUtils.readJsonFile("C:\\MyProgram\\Project\\KafkaStudy\\src\\main\\java\\json\\data.json");
+        String jsonData = KafkaUtils.readJsonFile("C:\\MyProgram\\Project\\Java-Learning\\KafkaStudy\\src\\main\\java\\json\\data.json");
 
 //        System.out.println(jsonData);
         JSONArray jsonArray = JSON.parseArray(jsonData);
